@@ -1,5 +1,5 @@
 # Web3 auth frontend example
-Complete example of we3 auth authenticating the user by signing a message 
+Complete example of web3 authentication example 
 
 ## 🤖 Demo
 
