@@ -40,7 +40,6 @@ function App () {
     const provider = new ethers.providers.Web3Provider(ethereum);
     const signer = provider.getSigner();
     const signature = await signer.signMessage(resBody.message)
-
     let opts = {
       method: 'POST',
       headers: {

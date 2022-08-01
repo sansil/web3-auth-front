@@ -2,7 +2,7 @@
 Complete example of we3 auth authenticating the user by signing a message 
 
 ## Backend
-Checkout the backend code [here](), deployed in [Heroku](https://dashboard.heroku.com/login)
+Checkout the backend code [here](https://github.com/sansil/web3-auth-back), deployed in [Heroku](https://dashboard.heroku.com/login)
 
 ## Why signing message to authenticate users?
 You want to verify that the user owns certain address, so the backend will provide a message and the user sign it. The user use their private key to sign the message. 
