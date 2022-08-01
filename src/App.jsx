@@ -2,6 +2,8 @@ import React, { useEffect, useState, } from "react";
 import { ethers } from "ethers";
 import reactLogo from './assets/react.svg'
 
+// replace with your URL
+const API_URL = 'https://web3-auth-back.herokuapp.com'
 
 function App () {
   const [account, setAccount] = useState(null)

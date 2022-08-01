@@ -1,6 +1,11 @@
 # Web3 auth frontend example
 Complete example of we3 auth authenticating the user by signing a message 
 
+## 🤖 Demo
+
+[Live demo](https://web3-auth-example.vercel.app/)
+App deployed on [Vercel](https://vercel.com/)
+
 ## Backend
 Checkout the backend code [here](https://github.com/sansil/web3-auth-back), deployed in [Heroku](https://dashboard.heroku.com/login)
 
@@ -22,7 +27,3 @@ You can understand more [here](https://medium.com/mycrypto/the-magic-of-digital-
 - ethers
 - JWT
 - Tailwindcss 
-## 🤖 Demo
-
-[Live demo](https://web3-auth-example.vercel.app/)
-App deployed on [Vercel](https://vercel.com/)
