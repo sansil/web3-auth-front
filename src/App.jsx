@@ -2,8 +2,8 @@ import React, { useEffect, useState, } from "react";
 import { ethers } from "ethers";
 import reactLogo from './assets/react.svg'
 
-// replace with your URL
-const API_URL = 'https://web3-auth-back.herokuapp.com'
+// replace with your API URL
+const BASE_URL = 'https://web3-auth-back.herokuapp.com'
 
 function App () {
   const [account, setAccount] = useState(null)
@@ -37,7 +37,7 @@ function App () {
 
   const authenticate = async (account) => {
     const { ethereum } = window;
-    let res = await fetch(`https://web3-auth-back.herokuapp.com/nonce?address=${account}`)
+    let res = await fetch(`${BASE_URL}/nonce?address=${account}`)
     let resBody = await res.json()
     const provider = new ethers.providers.Web3Provider(ethereum);
     const signer = provider.getSigner();
@@ -49,7 +49,7 @@ function App () {
         'Authorization': `Bearer ${resBody.tempToken}`
       }
     }
-    res = await fetch(`https://web3-auth-back.herokuapp.com/verify?signature=${signature}`, opts)
+    res = await fetch(`${BASE_URL}/verify?signature=${signature}`, opts)
     resBody = await res.json()
     return resBody.token
   }
@@ -68,7 +68,7 @@ function App () {
         'Authorization': `Bearer ${accessToken}`
       }
     }
-    let res = await fetch(`https://web3-auth-back.herokuapp.com/secret`, opts)
+    let res = await fetch(`${BASE_URL}/secret`, opts)
     let resBody = await res.json()
     setSecretMsgFromServer(resBody.msg)
   }
